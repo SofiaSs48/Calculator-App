@@ -1,0 +1,26 @@
+{% extends "python/layout.html" %}
+{% load static %}
+{% block body %}
+<h1>Menu</h1>
+<form method="post" action="{% url 'python:calculator' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Calculator</button>
+</form><br>
+{% endblock %}
+
+{% extends "python/layout.html" %}
+{% load static %}
+{% block body %}
+<h1>Menu</h1>
+<form method="post" action="{% url 'python:calculator' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Calculator</button>
+</form><br>
+<form method="post" action="{% url 'python:cat_images' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Cats</button>
+</form>
+{% endblock %}

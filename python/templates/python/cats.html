@@ -1,0 +1,10 @@
+{% extends "python/layout.html" %}
+{% load static %}
+{% block body %}
+<h1>Cat Images</h1>
+<div id="catImages">
+{% for cat_url in cat_urls %}
+<img src="{{ cat_url }}" style="width: 300px; height: auto; margin: 10px;">
+{% endfor %}
+</div>
+{% endblock %}
